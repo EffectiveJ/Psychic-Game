@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="styleSheet" href=''>
+</head>
+
+<body>
+   <!-- Not sure if I could use bootstrap to style this, better ask later-->
+   <h1>The Psychic Game: </h1>
+   <h2>Guess what letter I'm thinking of.</h2>
+   <p>Think you are smart enough to best a machine?
+      Let's see what you're made of.</p>
+   <div> <span>Wins(as if there are going to be any):</span></div>
+   <div> <span>Losses:</span></div>
+   <div> <span>Guesses:</span></div>
+   <script>
+      
+      // Declare the variables //
+      var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+      var userGuess = document.getElementById();
+      var wins = ""
+      var losses = ""
+      var attempts = ""
+     // Make the program able to capture and remember user's imput //
+      document.onkeyup = function (event) {
+      // Start coding the functions and events //
+         var userGuess = event.key;
+         var computerChoice = letters[Math.floor(Math.random() * letters.length)];
+         if (userGuess == computerChoice) { wins++ }
+         else if (userGuess !== computerChoice){ losses++ }
+      }
+      // A bit of trash talk by the computer if you're sucking //
+      if(losses > 5){
+         alert("What's wrong?, Ready to give up yet? ");
+      }
+      // gotta find a way to stop the consoole errors// 
+   </script>
+</body>
+
+</html>
