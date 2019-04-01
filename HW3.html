@@ -34,23 +34,23 @@
          // Start coding the functions and events //
          var userGuess = event.key;
          var computerChoice = letters[Math.floor(Math.random() * letters.length)];
-         if (userGuess == computerChoice) {
-            wins++
+        
+         if(userGuess === letters){
+          if (userGuess === computerChoice) {
+            wins++;
+          }
+          else {
+            losses++;
+          }
+          // A bit of trash talk by the computer if you're sucking //
+          if (losses > 5) {
+            alert("What's wrong?, Ready to give up yet? ");
+          }
             winsText.textContent = "wins: " + wins;
             lossesText.textContent = "losses: " + losses;
             attemptsText.textContent = "attempts:" + attempts;
          }
-         else if (userGuess !== computerChoice) {
-            losses++ ,
-            winsText.textContent = "wins:" + wins;
-            lossesText.textContent = "losses:" + losses;
-            attemptsText.textContent = "attempts:" + attempts;
-         }
-         // A bit of trash talk by the computer if you're sucking //
-         if (losses > 5) {
-            alert("What's wrong?, Ready to give up yet? ");
-         }
-      }
+      };
       // gotta find a way to stop the consoole errors//
    </script>
 </body>
