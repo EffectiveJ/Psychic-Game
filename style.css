@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+}
+h1{ 
+    background-color:red;
+    width:420px;
+    padding:25px;
+}
+p{
+    font-size: 30px;
+}
