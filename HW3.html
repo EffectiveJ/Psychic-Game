@@ -13,30 +13,45 @@
    <h2>Guess what letter I'm thinking of.</h2>
    <p>Think you are smart enough to best a machine? <br>
       Let's see what you're made of.</p>
-   <div class="div1"> <span>Wins(as if there are going to be any):</span></div>
-   <div class="div2"> <span>Losses: </span></div>
-   <div clas="div3"> <span>Guesses:</span></div>
+   <p class="wins-text"></p>
+   <p class="losses-text"></p>
+   <p clas="attempts-text"> </p>
    <script>
-      
+
       // Declare the variables //
       var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-      var userGuess = document.getElementById();
-      var wins = ""
-      var losses = ""
-      var attempts = ""
-     // Make the program able to capture and remember user's imput //
+      var userGuess = document.getElementById("");
+      var wins = 0;
+      var losses = 0;
+      var attempts = 0;
+      // make the variables that get all the elements I neede//
+      var winsText = document.getElementById("wins-text")
+      var lossesText = document.getElementById("losses-text")
+      var attemptsText = document.getElementById("attempts-text")
+      // Make the program able to capture and remember user's imput //
       document.onkeyup = function (event) {
-      // Start coding the functions and events //
+
+         // Start coding the functions and events //
          var userGuess = event.key;
          var computerChoice = letters[Math.floor(Math.random() * letters.length)];
-         if (userGuess == computerChoice) { wins++ }
-         else if (userGuess !== computerChoice){ losses++ }
+         if (userGuess == computerChoice) {
+            wins++
+            winsText.textContent = "wins: " + wins;
+            lossesText.textContent = "losses: " + losses;
+            attemptsText.textContent = "attempts:" + attempts;
+         }
+         else if (userGuess !== computerChoice) {
+            losses++ ,
+            winsText.textContent = "wins:" + wins;
+            lossesText.textContent = "losses:" + losses;
+            attemptsText.textContent = "attempts:" + attempts;
+         }
+         // A bit of trash talk by the computer if you're sucking //
+         if (losses > 5) {
+            alert("What's wrong?, Ready to give up yet? ");
+         }
       }
-      // A bit of trash talk by the computer if you're sucking //
-      if(losses > 5){
-         alert("What's wrong?, Ready to give up yet? ");
-      }
-      // gotta find a way to stop the consoole errors// 
+      // gotta find a way to stop the consoole errors//
    </script>
 </body>
 
