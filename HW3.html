@@ -15,7 +15,7 @@
       Let's see what you're made of.</p>
    <p class="wins-text"></p>
    <p class="losses-text"></p>
-   <p clas="attempts-text"> </p>
+   <p clas="attempts-text"></p>
    <script>
 
       // Declare the variables //
@@ -33,9 +33,12 @@
 
          // Start coding the functions and events //
          var userGuess = event.key;
+
          var computerChoice = letters[Math.floor(Math.random() * letters.length)];
         
-         if(userGuess === letters){
+         if(userGuess === "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ){
+            attempts++;
+
           if (userGuess === computerChoice) {
             wins++;
           }
