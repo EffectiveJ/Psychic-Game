@@ -37,21 +37,21 @@
          var computerChoice = letters[Math.floor(Math.random() * letters.length)];
         
          if(userGuess === "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ){
-            attempts++;
+            attempts++,
+            document.getElementById(attemptsText.textContent = "attempts:" + attempts)
 
           if (userGuess === computerChoice) {
-            wins++;
+            wins++,
+            document.getElementById (winsText.textContent = "wins: " + wins);
           }
           else {
-            losses++;
+            losses++,
+            document.getElementById(lossesText.textContent = "losses: " + losses)
           }
           // A bit of trash talk by the computer if you're sucking //
           if (losses > 5) {
             alert("What's wrong?, Ready to give up yet? ");
           }
-            winsText.textContent = "wins: " + wins;
-            lossesText.textContent = "losses: " + losses;
-            attemptsText.textContent = "attempts:" + attempts;
          }
       };
       // gotta find a way to stop the consoole errors//
